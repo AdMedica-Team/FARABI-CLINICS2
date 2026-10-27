@@ -11,16 +11,16 @@
   --bg-dark:         var(--brand-teal);  /* خلفيات البيج الغامق (شريط، أزرار، قسم الحجز) */
   --bg-dark-hover:   #A88B55;            /* hover على خلفيات البيج الغامق */
   --brand-red-50:    #FFEFEE;
-  --brand-red:       #9E291F;
-  --brand-red-900:   #7D241E;
+  --brand-red:       #7D241E;
+  --brand-red-900:   #5E1A15;  /* hover أغمق من النبيتي الأساسي */
   --brand-beige-50:  #F4EDDA;
   --brand-beige:     #E9D2B0;
   --brand-beige-700: #C1A26B;
-  --page-bg:         #F4EDDA;  /* خلفية المشروع */
-  --section-bg:      #F4EDDA;  /* خلفية الأقسام */
-  --text-color:      #842E27;  /* لون الكتابة — نفس نبيتي البوردر */
+  --page-bg:         #FFFFFF;  /* خلفية المشروع */
+  --section-bg:      #FFFFFF;  /* خلفية الأقسام */
+  --text-color:      #7D241E;  /* لون الكتابة */
   --text-muted:      var(--text-color);  /* الكتابة الثانوية — نفس اللون */
-  --brand-gradient-red:  linear-gradient(90deg, #FFEFEE 0%, #842E27 100%);
+  --brand-gradient-red:  linear-gradient(90deg, #FFEFEE 0%, #7D241E 100%);
   --brand-gradient-teal: linear-gradient(90deg, #F4EDDA 0%, #4A3525 100%);
 }
 
@@ -28,72 +28,21 @@
    LOCAL WEBFONTS — SHARED ACROSS ALL PAGES
 ══════════════════════════════════════ */
 
-/* ── Montserrat (English headings & UI) ── */
-@font-face { font-family:'Montserrat'; src:url('../webfonts/Montserrat-Regular.ttf') format('truetype'); font-weight:400; font-display:swap; }
-@font-face { font-family:'Montserrat'; src:url('../webfonts/Montserrat-Medium.ttf') format('truetype'); font-weight:500; font-display:swap; }
-@font-face { font-family:'Montserrat'; src:url('../webfonts/Montserrat-SemiBold.ttf') format('truetype'); font-weight:600; font-display:swap; }
-@font-face { font-family:'Montserrat'; src:url('../webfonts/Montserrat-Bold.ttf') format('truetype'); font-weight:700; font-display:swap; }
-@font-face { font-family:'Montserrat'; src:url('../webfonts/Montserrat-ExtraBold.ttf') format('truetype'); font-weight:800; font-display:swap; }
-@font-face { font-family:'Montserrat'; src:url('../webfonts/Montserrat-Black.ttf') format('truetype'); font-weight:900; font-display:swap; }
-@font-face { font-family:'Montserrat'; src:url('../webfonts/Montserrat-Light.ttf') format('truetype'); font-weight:300; font-display:swap; }
+/* ── Somar (الخط الأساسي للموقع) — size-adjust بيكبّره 30% لأن شكله أصغر من الخط القديم ── */
+@font-face { font-family:'Somar'; src:url('../webfonts/ARBFONTS-SOMAR-THIN.OTF') format('opentype'); font-weight:100; size-adjust:130%; font-display:swap; }
+@font-face { font-family:'Somar'; src:url('../webfonts/ARBFONTS-SOMAR-EXTRALIGHT.OTF') format('opentype'); font-weight:200; size-adjust:130%; font-display:swap; }
+@font-face { font-family:'Somar'; src:url('../webfonts/ARBFONTS-SOMAR-LIGHT.OTF') format('opentype'); font-weight:300; size-adjust:130%; font-display:swap; }
+@font-face { font-family:'Somar'; src:url('../webfonts/ARBFONTS-SOMAR-REGULAR.OTF') format('opentype'); font-weight:400; size-adjust:130%; font-display:swap; }
+@font-face { font-family:'Somar'; src:url('../webfonts/ARBFONTS-SOMAR-SEMIBOLD.OTF') format('opentype'); font-weight:600; size-adjust:130%; font-display:swap; }
+@font-face { font-family:'Somar'; src:url('../webfonts/ARBFONTS-SOMAR-BOLD.OTF') format('opentype'); font-weight:700; size-adjust:130%; font-display:swap; }
+@font-face { font-family:'Somar'; src:url('../webfonts/ARBFONTS-SOMAR-EXTRABOLD.OTF') format('opentype'); font-weight:800; size-adjust:130%; font-display:swap; }
+@font-face { font-family:'Somar'; src:url('../webfonts/ARBFONTS-SOMAR-BLACK.OTF') format('opentype'); font-weight:900; size-adjust:130%; font-display:swap; }
 
-/* ── Chivo (English body text) ── */
-@font-face { font-family:'Chivo'; src:url('../webfonts/Chivo-Regular.ttf') format('truetype'); font-weight:400; font-style:normal; font-display:swap; }
-@font-face { font-family:'Chivo'; src:url('../webfonts/Chivo-Medium.ttf') format('truetype'); font-weight:500; font-style:normal; font-display:swap; }
-@font-face { font-family:'Chivo'; src:url('../webfonts/Chivo-SemiBold.ttf') format('truetype'); font-weight:600; font-style:normal; font-display:swap; }
-@font-face { font-family:'Chivo'; src:url('../webfonts/Chivo-Bold.ttf') format('truetype'); font-weight:700; font-style:normal; font-display:swap; }
-@font-face { font-family:'Chivo'; src:url('../webfonts/Chivo-Light.ttf') format('truetype'); font-weight:300; font-style:normal; font-display:swap; }
-@font-face { font-family:'Chivo'; src:url('../webfonts/Chivo-ExtraBold.ttf') format('truetype'); font-weight:800; font-style:normal; font-display:swap; }
-@font-face { font-family:'Chivo'; src:url('../webfonts/Chivo-Black.ttf') format('truetype'); font-weight:900; font-style:normal; font-display:swap; }
-@font-face { font-family:'Chivo'; src:url('../webfonts/Chivo-Black.ttf') format('truetype'); font-weight:900; font-style:normal; font-display:swap; }
+/* ── Formadjr Arabic Display (عناوين الأقسام) ── */
+@font-face { font-family:'Formadjr'; src:url('../webfonts/ALFONT_COM_FORMADJRARABICDISPLAY-BOLD-TESTING.OTF') format('opentype'); font-weight:700; size-adjust:115%; font-display:swap; }
 
-/* ── Bahij Bold Font ── */
-@font-face {
-  font-family: 'Bahij';
-  src: url('../webfonts/Bahij_Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* ── Bahij SemiBold Font ── */
-@font-face {
-  font-family: 'Bahij';
-  src: url('../webfonts/Bahij_smibold.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* ── Bukra Bold Font ── */
-@font-face {
-  font-family: 'Bukra';
-  src: url('../webfonts/bukrabold.otf') format('opentype'),
-       url('../webfonts/bukrabold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* ── Bukra Regular Font ── */
-@font-face {
-  font-family: 'Bukra';
-  src: url('../webfonts/29ltbukraregular.otf') format('opentype'),
-       url('../webfonts/29ltbukraregular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* ── Bukra Light Font ── */
-@font-face {
-  font-family: 'Bukra';
-  src: url('../webfonts/bukralight.otf') format('opentype'),
-       url('../webfonts/bukralight.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
+/* عنوان قسم الحجز بخط Formadjr (زي عنوان «من نحن») */
+.lead-heading { font-family: 'Formadjr', 'Somar', sans-serif; }
 
 * {
   margin: 0;
@@ -102,16 +51,16 @@
 }
 
 html, body {
-  font-family: 'Bukra', 'Bahij', 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   background-color: var(--page-bg);
   color: #374151;
   direction: rtl;
   overflow-x: hidden;
 }
 
-/* ── English pages: Montserrat for all text ── */
+/* ── English pages: same font for all text ── */
 html[lang="en"], html[lang="en"] body {
-  font-family: 'Montserrat', 'Chivo', sans-serif;
+  font-family: 'Somar', sans-serif;
   direction: ltr;
   overflow-x: hidden;
 }
@@ -121,13 +70,13 @@ html[lang="en"] h3,
 html[lang="en"] h4,
 html[lang="en"] h5,
 html[lang="en"] h6 {
-  font-family: 'Chivo', 'Montserrat', sans-serif;
+  font-family: 'Somar', sans-serif;
 }
 html[lang="en"] .hero-title,
 html[lang="en"] .hero-title-new,
 html[lang="en"] .hero-title-line1,
 html[lang="en"] .hero-title-line2 {
-  font-family: 'Chivo', 'Montserrat', sans-serif;
+  font-family: 'Somar', sans-serif;
 }
 html[lang="en"] .hero-title-new {
   direction: ltr;
@@ -309,7 +258,7 @@ section {
   font-style: normal;
   letter-spacing: 1px;
   text-decoration: none;
-  font-family: 'Chivo', sans-serif;
+  font-family: 'Somar', sans-serif;
   display: inline-block;
   transform: skewX(10deg);
   text-shadow:
@@ -482,7 +431,7 @@ section {
   background: transparent;
   padding: 6px 10px;
   border-radius: 20px;
-  font-family: 'Bahij', 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 14px;
   font-weight: 600;
   text-decoration: none;
@@ -505,7 +454,7 @@ section {
   border: none;
   padding: 8px 20px;
   border-radius: 25px;
-  font-family: 'Bahij', 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
@@ -537,7 +486,7 @@ section {
 /* ── Hero Section ── */
 .hero {
   padding: 20px 30px 40px;
-  background-color: var(--page-bg);
+  background-color: transparent;
 }
 
 .hero-wrapper {
@@ -597,7 +546,7 @@ section {
 
 .hero-title-line1 {
   display: block;
-  font-family: 'Bukra', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 38px;
   font-weight: 400;
   color: #C1A26B;
@@ -612,7 +561,7 @@ section {
 
 .hero-title-line2 {
   display: block;
-  font-family: 'Bukra', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 46px;
   font-weight: 700;
   color: #fff;
@@ -649,7 +598,7 @@ section {
 
 /* Hero Title */
 .hero-title {
-  font-family: 'Bukra', 'Bahij', 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 44px;
   font-weight: 900;
   color: #ffffff;
@@ -669,12 +618,12 @@ section {
 
 .hero-line-1 {
   display: block;
-  font-family: 'Bukra', 'Bahij', 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
 }
 
 .hero-line-2 {
   display: block;
-  font-family: 'Bukra', 'Bahij', 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
 }
 
 .hero-title .highlight {
@@ -698,7 +647,7 @@ section {
   background-color: var(--bg-dark);
   padding: 4px 22px;
   border-radius: 25px;
-  font-family: 'Bahij', 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 15px;
   font-weight: 700;
   letter-spacing: 0.5px;
@@ -736,7 +685,7 @@ section {
   background-color: transparent;
   padding: 4px 22px;
   border-radius: 25px;
-  font-family: 'Bahij', 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 15px;
   font-weight: 700;
   letter-spacing: 0.5px;
@@ -766,7 +715,7 @@ section {
 }
 
 .stat-num {
-  font-family: 'Bahij', 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 32px;
   font-weight: 900;
   color: var(--text-color);
@@ -925,7 +874,7 @@ section {
 }
 
 .scs-eyebrow {
-  font-family: 'Bahij', 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 2.5px;
@@ -935,7 +884,7 @@ section {
 }
 
 .scs-title {
-  font-family: 'Bukra', 'Bahij', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 28px;
   font-weight: 700;
   background: linear-gradient(to left, var(--bg-dark), #a9a8a5, var(--brand-teal-50));
@@ -1032,7 +981,7 @@ section {
 }
 
 .scs-card-title {
-  font-family: 'Bukra', 'Bahij', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 11px;
   font-weight: 700;
   color: #fff5f0;
@@ -1044,7 +993,7 @@ section {
 }
 
 .scs-card-desc {
-  font-family: 'Bahij', 'Tajawal', sans-serif; /* Bahij */
+  font-family: 'Somar', sans-serif;
   font-size: 12.5px;
   color: var(--text-muted);
   line-height: 1.7;
@@ -1060,7 +1009,7 @@ section {
 }
 
 .scs-footer-desc {
-  font-family: 'Bahij', 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 15px;
   color: var(--text-muted);
   line-height: 1.8;
@@ -1075,7 +1024,7 @@ section {
   margin: 0 auto 16px;
   width: fit-content;
   padding: 6px 16px;
-  font-family: 'Bukra', 'Bahij', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 11px;
   font-weight: 700;
   color: var(--text-color);
@@ -1155,7 +1104,7 @@ section {
 }
 
 .wr-intro-text {
-  font-family: 'Bahij', 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 11.5px;
   line-height: 1.8;
   color: var(--text-muted);
@@ -1195,14 +1144,14 @@ section {
 }
 
 .wr-author-name {
-  font-family: 'Bukra', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 14px;
   font-weight: 700;
   color: var(--text-color);
 }
 
 .wr-author-title {
-  font-family: 'Bahij', 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 12px;
   color: var(--text-muted);
 }
@@ -1220,7 +1169,7 @@ section {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-family: 'Bukra', 'Bahij', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 14px;
   font-weight: 600;
   color: var(--text-muted);
@@ -1263,13 +1212,13 @@ section {
 }
 
 .wr-phone-label {
-  font-family: 'Bahij', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 11px;
   color: var(--text-muted);
 }
 
 .wr-phone-num {
-  font-family: 'Bukra', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 15px;
   font-weight: 700;
   color: var(--text-color);
@@ -1451,7 +1400,7 @@ section {
   font-size: 17px;
   font-weight: 700;
   color: var(--text-color);
-  font-family: 'Bahij', 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   text-align: right;
   line-height: 1.4;
 }
@@ -1459,7 +1408,7 @@ section {
 .wr-desc {
   font-size: 15px;
   color: var(--text-muted);
-  font-family: 'Bahij', 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   line-height: 1.5;
   margin: 0;
 }
@@ -1474,7 +1423,7 @@ section {
 }
 
 .wr-sub-list li {
-  font-family: 'Bahij', 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 12.5px;
   color: var(--text-muted);
   line-height: 1.6;
@@ -1494,7 +1443,7 @@ section {
 /* ── About Section ── */
 .about {
   padding: 60px 0;
-  background-color: var(--page-bg);
+  background-color: transparent;
   overflow: hidden;
   margin-bottom: 10rem;
 }
@@ -1562,7 +1511,7 @@ section {
 .apb.show { opacity: 0.20; }
 
 .about-eyebrow {
-  font-family: 'Bukra', 'Bahij', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 3px;
@@ -1575,7 +1524,7 @@ section {
 }
 
 .about-title {
-  font-family: 'Bukra', 'Bahij', 'Tajawal', sans-serif;
+  font-family: 'Formadjr', 'Somar', sans-serif;
   font-size: 30px;
   font-weight: 900;
   color: var(--text-color);
@@ -1629,7 +1578,7 @@ section {
 }
 
 .counter-num {
-  font-family: 'Bukra', 'Bahij', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 24px;
   font-weight: 900;
   color: var(--text-color);
@@ -1679,7 +1628,7 @@ section {
   background: transparent;
   border: none;
   cursor: pointer;
-  font-family: 'Bahij', 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 14px;
   font-weight: 700;
   color: var(--text-muted);
@@ -1763,7 +1712,7 @@ section {
 
 /* About tagline (two-color) */
 .about-tagline {
-  font-family: 'Bukra', 'Bahij', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 24px;
   font-weight: 700;
   line-height: 1.5;
@@ -1780,7 +1729,7 @@ section {
 
 /* About sub label */
 .about-sub-label {
-  font-family: 'Bahij', 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 13px;
   font-weight: 500;
   color: var(--text-color);
@@ -1871,7 +1820,7 @@ section {
   border: none;
   padding: 13px 36px;
   border-radius: 8px;
-  font-family: 'Bahij', 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 14px;
   font-weight: 700;
   text-decoration: none;
@@ -1889,7 +1838,7 @@ section {
   align-items: center;
   gap: 10px;
   color: var(--text-color);
-  font-family: 'Bahij', 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 14px;
   font-weight: 700;
   text-decoration: none;
@@ -1938,7 +1887,7 @@ section {
 }
 
 .bento-eyebrow {
-  font-family: 'Bukra', 'Bahij', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 3px;
@@ -1951,7 +1900,7 @@ section {
 }
 
 .bento-section-title {
-  font-family: 'Bukra', 'Bahij', 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 26px;
   font-weight: 800;
   color: var(--text-muted);
@@ -2006,7 +1955,7 @@ section {
 .bc-t3 { background: #6c6d69; }
 
 .bc-title {
-  font-family: 'Bukra', 'Bahij', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 13px;
   font-weight: 700;
   color: var(--text-muted);
@@ -2019,7 +1968,7 @@ section {
 
 .bc-year {
   display: block;
-  font-family: 'Bukra', 'Bahij', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 24px;
   font-weight: 900;
   color: var(--text-color);
@@ -2028,7 +1977,7 @@ section {
 }
 
 .bc-desc {
-  font-family: 'Bahij', 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 11px;
   line-height: 1.7;
   color: var(--text-muted);
@@ -2045,7 +1994,7 @@ section {
 }
 
 .bc-list li {
-  font-family: 'Bahij', 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 11px;
   color: var(--text-muted);
   line-height: 1.65;
@@ -2335,7 +2284,7 @@ section {
 }
 
 .services-eyebrow {
-  font-family: 'Bukra', 'Bahij', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 3px;
@@ -2365,7 +2314,7 @@ section {
 }
 
 .services-title {
-    font-family: 'Bukra', 'Bahij', 'Tajawal', sans-serif;  
+    font-family: 'Somar', sans-serif;  
     font-size: 26px;
   font-weight: 800;
   color: var(--text-muted);
@@ -2374,7 +2323,7 @@ section {
 }
 
 .services-all-link {
-  font-family: 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 14px;
   font-weight: 700;
   color: var(--text-color);
@@ -2426,7 +2375,7 @@ section {
 .svc-slide-label {
   padding: 28px 16px;
   text-align: center;
-  font-family: 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 1.05rem;
   font-weight: 500;
   color: var(--text-color);
@@ -2446,21 +2395,21 @@ section {
   margin-bottom: 12px;
 }
 .svc-slide-title {
-  font-family: 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--text-color);
   margin: 0 0 10px;
 }
 .svc-slide-desc {
-  font-family: 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 0.9rem;
   color: var(--text-muted);
   line-height: 1.75;
   margin: 0 0 16px;
 }
 .svc-slide-link {
-  font-family: 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   color: var(--text-color);
   font-weight: 700;
   font-size: 0.95rem;
@@ -2602,7 +2551,7 @@ background: var(--page-bg);
   border: 1.5px solid rgba(74,53,37, 0.3);
   background: rgba(255, 255, 255, 0.55);
   cursor: pointer;
-  font-family: 'Bukra', 'Bahij', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 13px;
   font-weight: 700;
   color: var(--text-muted);
@@ -2681,7 +2630,7 @@ background: var(--page-bg);
   padding: 32px 14px 14px;
 }
 .svc-front-label h3 {
-  font-family: 'Bukra', 'Bahij', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 13px;
   font-weight: 700;
   color: #fff;
@@ -2728,7 +2677,7 @@ background: var(--page-bg);
 }
 
 .svc-title {
-  font-family: 'Bukra', 'Bahij', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 14px;
   font-weight: 700;
   color: var(--text-color);
@@ -2737,7 +2686,7 @@ background: var(--page-bg);
 }
 
 .svc-desc {
-  font-family: 'Bahij', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-weight: 600;
   font-size: 12.5px;
   color: var(--text-muted);
@@ -2751,7 +2700,7 @@ background: var(--page-bg);
 }
 
 .svc-link {
-  font-family: 'Bukra', 'Bahij', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 13px;
   font-weight: 700;
   color: var(--text-color);
@@ -2796,7 +2745,7 @@ background: var(--page-bg);
   align-items: center;
   justify-content: flex-start;
   gap: 10px;
-  font-family: 'Bukra', 'Bahij', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 3px;
@@ -2806,7 +2755,7 @@ background: var(--page-bg);
 }
 
 .testi-title {
-  font-family: 'Bukra', 'Bahij', 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 30px;
   font-weight: 800;
   color: var(--text-muted);
@@ -2815,7 +2764,7 @@ background: var(--page-bg);
 }
 
 .testi-subtitle {
-  font-family: 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   color: var(--text-muted);
   font-size: 1.05rem;
   line-height: 1.8;
@@ -2868,15 +2817,15 @@ background: var(--page-bg);
   border-radius: 50%;
   background: rgba(255,255,255,0.94);
   display: flex; align-items: center; justify-content: center;
-  font-family: 'Bukra', 'Bahij', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 14px; font-weight: 700; color: var(--text-color);
 }
 .bento-stat-info h4 {
-  font-family: 'Bukra', 'Bahij', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 17px; font-weight: 800; color: #3a2e26;
 }
 .bento-stat-info p {
-  font-family: 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 12px; color: var(--text-muted); line-height: 1.45; margin-top: 3px;
 }
 
@@ -2899,11 +2848,11 @@ background: var(--page-bg);
   color: var(--text-color); font-family: Georgia, serif;
 }
 .bento-q-text {
-  font-family: 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 13.5px; color: var(--text-muted); line-height: 1.75; margin-top: -10px;
 }
 .bento-q-author {
-  font-family: 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 12px; color: var(--text-color); font-weight: 700;
 }
 
@@ -2943,7 +2892,7 @@ background: var(--page-bg);
 
 /* ── Quote text ── */
 .testi-quote-text {
-  font-family: 'Tajawal', 'Chivo', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 1.1rem;
   color: var(--text-color);
   line-height: 1.75;
@@ -2952,7 +2901,7 @@ background: var(--page-bg);
 
 /* ── Closing paragraph ── */
 .testi-cta-closing {
-  font-family: 'Tajawal', 'Chivo', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 1.1rem;
   color: var(--text-color);
   line-height: 1.6;
@@ -2973,7 +2922,7 @@ background: var(--page-bg);
 }
 
 .testi-cta-title {
-  font-family: 'Montserrat', 'Bukra', 'Bahij', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: clamp(1.4rem, 2vw, 1.8rem);
   font-weight: 900;
   line-height: 1.2;
@@ -2995,7 +2944,7 @@ background: var(--page-bg);
   margin: 0 0 2px;
 }
 .testi-contact-label {
-  font-family: 'Chivo', 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 1.05rem;
   color: var(--text-color);
   margin: 0 0 3px;
@@ -3003,7 +2952,7 @@ background: var(--page-bg);
 }
 .testi-phone-num {
   display: none;
-  font-family: 'Montserrat', 'Bukra', 'Bahij', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 1.7rem;
   font-weight: 800;
   color: #C1A26B;
@@ -3018,7 +2967,7 @@ background: var(--page-bg);
   background: var(--bg-dark);
   color: #fff;
   border-color: transparent;
-  font-family: 'Montserrat', 'Bahij', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-weight: 700;
   letter-spacing: 0.3px;
 }
@@ -3029,7 +2978,7 @@ background: var(--page-bg);
 .testi-cta-side .btn-about-secondary {
   border-color: var(--brand-teal-900);
   color: var(--text-color);
-  font-family: 'Chivo', 'Bahij', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-weight: 400;
 }
 .testi-cta-side .btn-about-secondary:hover {
@@ -3448,7 +3397,7 @@ background: var(--page-bg);
 }
 
 .pb-card-avatar-init {
-  font-family: 'Bukra', 'Bahij', 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 1rem;
   color: #fff;
   font-weight: 700;
@@ -3457,7 +3406,7 @@ background: var(--page-bg);
 .pb-card-meta { flex: 1; }
 
 .pb-card-name {
-  font-family: 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 0.82rem;
   font-weight: 700;
   color: #fff;
@@ -3479,7 +3428,7 @@ background: var(--page-bg);
 }
 
 .pb-card-quote {
-  font-family: 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 0.82rem;
   color: rgba(255,255,255,0.88);
   line-height: 1.65;
@@ -3614,13 +3563,13 @@ background: var(--page-bg);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Bukra', 'Bahij', 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 32px;
   color: rgba(255,255,255,0.9);
 }
 
 .pb-cover-title {
-  font-family: 'Bukra', 'Bahij', 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 2rem;
   color: rgba(255,255,255,0.92);
   text-align: center;
@@ -3628,7 +3577,7 @@ background: var(--page-bg);
 }
 
 .pb-cover-sub {
-  font-family: 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 0.8rem;
   color: rgba(255,255,255,0.6);
   letter-spacing: 2px;
@@ -3667,7 +3616,7 @@ background: var(--page-bg);
 }
 
 .pb-card-tagline {
-  font-family: 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 0.75rem;
   color: #b09080;
   letter-spacing: 1.5px;
@@ -3688,7 +3637,7 @@ background: var(--page-bg);
   align-items: center;
   justify-content: center;
   color: #fff;
-  font-family: 'Bukra', 'Bahij', 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 24px;
   font-weight: 700;
   z-index: 3;
@@ -3841,7 +3790,7 @@ background: var(--page-bg);
 }
 
 .pb-reviewer-name {
-  font-family: 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 1rem;
   font-weight: 700;
   color: var(--text-color);
@@ -3884,7 +3833,7 @@ background: var(--page-bg);
   position: absolute;
   right: 0;
   top: -4px;
-  font-family: 'Bukra', 'Bahij', 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 2.5rem;
   color: var(--text-color);
   opacity: 0.35;
@@ -3900,7 +3849,7 @@ background: var(--page-bg);
   align-items: center;
   justify-content: center;
   color: #fff;
-  font-family: 'Bukra', 'Bahij', 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 18px;
   font-weight: 700;
   flex-shrink: 0;
@@ -3909,21 +3858,21 @@ background: var(--page-bg);
 .pb-author-info { flex: 1; }
 
 .pb-author-name {
-  font-family: 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 0.92rem;
   font-weight: 700;
   color: #fff;
 }
 
 .pb-author-service {
-  font-family: 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 0.78rem;
   color: rgba(255,255,255,0.8);
   margin-top: 2px;
 }
 
 .pb-author-since {
-  font-family: 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 0.75rem;
   color: rgba(255,255,255,0.65);
   margin-top: 2px;
@@ -3937,7 +3886,7 @@ background: var(--page-bg);
   background: none;
   border: none;
   color: #1a73e8;
-  font-family: 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 0.75rem;
   font-weight: 600;
   cursor: pointer;
@@ -3953,7 +3902,7 @@ background: var(--page-bg);
   gap: 5px;
   background: rgba(255,255,255,0.18);
   color: #fff;
-  font-family: 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 0.88rem;
   font-weight: 600;
   padding: 5px 10px;
@@ -4010,7 +3959,7 @@ background: var(--page-bg);
   display: flex;
   align-items: baseline;
   gap: 5px;
-  font-family: 'Bukra', 'Bahij', 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   direction: ltr;
 }
 
@@ -4112,7 +4061,7 @@ background: var(--page-bg);
 }
 
 .rv-avatar-init {
-  font-family: 'Bukra', 'Bahij', 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 1.2rem;
   color: #fff;
   font-weight: 700;
@@ -4121,7 +4070,7 @@ background: var(--page-bg);
 .rv-author-info { flex: 1; }
 
 .rv-author-name {
-  font-family: 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 0.92rem;
   font-weight: 700;
   color: #fff;
@@ -4143,7 +4092,7 @@ background: var(--page-bg);
 }
 
 .rv-quote {
-  font-family: 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 0.9rem;
   color: rgba(255,255,255,0.9);
   line-height: 1.7;
@@ -4220,7 +4169,7 @@ background: var(--page-bg);
   color: var(--text-color);
 }
 .pb-cta-title {
-  font-family: 'Bukra', 'Bahij', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 1rem;
   font-weight: 800;
   color: var(--text-color);
@@ -4228,7 +4177,7 @@ background: var(--page-bg);
   line-height: 1.3;
 }
 .pb-cta-body {
-  font-family: 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 0.78rem;
   color: var(--text-color);
   line-height: 1.6;
@@ -4240,7 +4189,7 @@ background: var(--page-bg);
   gap: 6px;
   background: #25D366;
   color: #fff;
-  font-family: 'Bukra', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 0.78rem;
   font-weight: 700;
   padding: 8px 18px;
@@ -4252,7 +4201,7 @@ background: var(--page-bg);
 .pb-cta-btn:hover { background: #1ebc58; }
 .pb-cta-phone {
   display: none;
-  font-family: 'Bukra', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 0.82rem;
   font-weight: 700;
   color: var(--text-color);
@@ -4279,7 +4228,7 @@ background: var(--page-bg);
 }
 
 .ba-eyebrow {
-  font-family: 'Bukra', 'Bahij', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 3px;
@@ -4292,7 +4241,7 @@ background: var(--page-bg);
 }
 
 .ba-title {
-  font-family: 'Bukra', 'Bahij', 'Tajawal', sans-serif;
+  font-family: 'Formadjr', 'Somar', sans-serif;
   font-size: 26px;
   font-weight: 800;
   color: var(--text-muted);
@@ -4395,7 +4344,7 @@ background: var(--page-bg);
   padding: 14px 18px;
 }
 .ba-card-info h4 {
-  font-family: 'Bukra', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 0.95rem;
   font-weight: 700;
   color: var(--text-color);
@@ -4482,7 +4431,7 @@ background: var(--page-bg);
 .site-footer {
   background: linear-gradient(150deg, #d0cbbb 0%, #d3cebe 55%, #c0beb3 100%);
   color: var(--text-color);
-  font-family: 'Tajawal', sans-serif;
+  font-family: 'Somar', sans-serif;
   direction: rtl;
 }
 
@@ -4507,7 +4456,7 @@ background: var(--page-bg);
   margin-bottom: 16px;
 }
 .footer-logo-text {
-  font-family: 'Bukra', 'Bahij', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 1.35rem;
   font-weight: 900;
   color: var(--text-color);
@@ -4530,7 +4479,7 @@ background: var(--page-bg);
   display: block;
   background: var(--bg-dark);
   color: #fff;
-  font-family: 'Bukra', 'Bahij', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 0.88rem;
   font-weight: 700;
   padding: 10px 36px;
@@ -4582,7 +4531,7 @@ background: var(--page-bg);
 
 /* عناوين الأعمدة */
 .footer-col-title {
-  font-family: 'Bukra', 'Bahij', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 1rem;
   font-weight: 800;
   color: var(--text-color);
@@ -4652,7 +4601,7 @@ background: var(--page-bg);
 .footer-hours-time {
   color: var(--text-color);
   font-weight: 700;
-  font-family: 'Bukra', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 0.88rem;
 }
 .footer-hours-closed { justify-content: flex-start !important; gap: 4px; }
@@ -4667,7 +4616,7 @@ background: var(--page-bg);
   color: var(--text-color);
   text-decoration: none;
   font-weight: 700;
-  font-family: 'Bukra', sans-serif;
+  font-family: 'Somar', sans-serif;
   transition: color 0.2s;
 }
 .footer-map-link:hover { color: var(--text-color); }
@@ -4864,7 +4813,7 @@ background: var(--page-bg);
   border-bottom: 1px solid rgba(74,53,37,0.12);
 }
 .mobile-nav-links a {
-  font-family: 'Bukra', 'Bahij', sans-serif;
+  font-family: 'Somar', sans-serif;
   font-size: 15px;
   font-weight: 700;
   color: var(--text-color);
@@ -6855,7 +6804,7 @@ a.tbs-item:hover { color: #fff; }
 }
 
 /* ══════════════════════════════════════
-   بوردر الأقسام بالنبيتي — تدريج من نبيتي فاتح ناحية الكلام لـ #842E27
+   بوردر الأقسام بالنبيتي — تدريج من نبيتي فاتح ناحية الكلام لـ #7D241E (نبيتي المشروع)
    (مرسوم بـ ::after عشان يمشي مع الزوايا والخلفيات الشفافة)
 ══════════════════════════════════════ */
 .navbar,
@@ -6863,12 +6812,12 @@ a.tbs-item:hover { color: #fff; }
 .services,
 .ba-section,
 .lead-section,
-.pb-book-wrap { --ring: linear-gradient(to left, rgba(158,41,31,0.35) 0%, #9E291F 55%, #842E27 100%); }
+.pb-book-wrap { --ring: linear-gradient(to left, rgba(125,36,30,0.35) 0%, #7D241E 55%, #7D241E 100%); }
 html[lang="en"] .navbar,
 html[lang="en"] .hmag-frame,
 html[lang="en"] .services,
 html[lang="en"] .ba-section,
-html[lang="en"] .pb-book-wrap { --ring: linear-gradient(to right, rgba(158,41,31,0.35) 0%, #9E291F 55%, #842E27 100%); }
+html[lang="en"] .pb-book-wrap { --ring: linear-gradient(to right, rgba(125,36,30,0.35) 0%, #7D241E 55%, #7D241E 100%); }
 .navbar, .hmag-frame, .pb-book-wrap { border-color: transparent; }
 .hmag-frame, .pb-book-wrap { position: relative; }
 .navbar::after,
@@ -6881,7 +6830,7 @@ html[lang="en"] .pb-book-wrap { --ring: linear-gradient(to right, rgba(158,41,31
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  padding: 1.5px;
+  padding: 1px;
   background: var(--ring);
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
@@ -6892,6 +6841,42 @@ html[lang="en"] .pb-book-wrap { --ring: linear-gradient(to right, rgba(158,41,31
 /* البوردر الأصلي بقى شفاف — الحلقة تتمد فوقه بالظبط */
 .navbar::after { inset: -1.5px; }
 .hmag-frame::after, .pb-book-wrap::after { inset: -1px; }
+
+/* ── عمق 3D للأقسام: حافة سفلية + ظل + لمعة فوق — من غير ما القسم يتحرك من مكانه ── */
+.navbar,
+.hmag-frame,
+.services,
+.ba-section,
+.lead-section,
+.about,
+.pb-book-wrap {
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.9),
+    0 2px 0 0 rgba(125,36,30,0.14),
+    0 8px 16px -8px rgba(74,53,37,0.25) !important;
+}
+/* قسم «من نحن» بقى كارت زي باقي الأقسام */
+.about {
+  --ring: linear-gradient(to left, rgba(125,36,30,0.35) 0%, #7D241E 55%, #7D241E 100%);
+  position: relative;
+  margin-left: var(--edge);
+  margin-right: var(--edge);
+  border-radius: 10px;
+}
+html[lang="en"] .about { --ring: linear-gradient(to right, rgba(125,36,30,0.35) 0%, #7D241E 55%, #7D241E 100%); }
+.about::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: var(--ring);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  pointer-events: none;
+  z-index: 3;
+}
 
 /* ── قسم العروض (كان قبل وبعد): نفس قيم الأقسام اللي فوقه + كروت بمقاس العرض ── */
 .ba-section .ba-eyebrow                { color: var(--brand-teal); }
@@ -6917,7 +6902,7 @@ html[lang="en"] .pb-book-wrap { --ring: linear-gradient(to right, rgba(158,41,31
   margin: 0 30px 6rem;
   border-radius: 10px;
   padding: 56px 48px;
-  background: var(--section-bg) !important;
+  background: transparent !important;
   scroll-margin-top: 110px;
 }
 .lead-wrap {
@@ -6965,7 +6950,7 @@ html[lang="en"] .pb-book-wrap { --ring: linear-gradient(to right, rgba(158,41,31
 .lead-card-head h3 { margin: 0 0 4px; font-size: 20px; font-weight: 800; color: var(--text-color); }
 .lead-card-head p { margin: 0; font-size: 13px; color: var(--text-color); }
 .lead-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; }
-/* منطقة من غير فروع (الدمام): خانة الخدمة بس بعرض كامل */
+/* منطقة من غير فروع: خانة الخدمة بس بعرض كامل */
 .lead-grid.no-branch { grid-template-columns: minmax(0, 1fr); }
 .lead-grid.no-branch > .lead-field:first-child { display: none; }
 .lead-field { display: flex; flex-direction: column; gap: 8px; }
@@ -7337,3 +7322,288 @@ html body .hero:not(.hero--magazine) .hero-wrapper { margin-left: 0 !important; 
 }
 .mnav-contact-icon { display: inline-flex; color: var(--bg-dark); }
 @media (min-width: 768px) { .mobile-nav-overlay { display: none !important; } }
+
+/* ══════════════════════════════════════
+   مقاسات الكتابة — أكبر عشان تناسب خط Somar — الفقرات Regular والعناوين أتقل
+   (آخر الملف عشان تغلب مقاسات الشاشات المختلفة اللي فوق)
+══════════════════════════════════════ */
+.about-desc,
+.lead-lead                    { font-size: 18px !important; line-height: 1.9 !important; font-weight: 400 !important; }
+.about-features .feature-title { font-size: 19px !important; font-weight: 700 !important; }
+.about-features .feature-desc  { font-size: 17px !important; line-height: 1.8 !important; font-weight: 400 !important; }
+.lead-perks li                { font-size: 17px !important; font-weight: 400 !important; }
+.lead-field > label,
+.lead-label                   { font-size: 16px !important; font-weight: 600 !important; }
+.lead-region span             { font-size: 16px !important; font-weight: 600 !important; }
+.lead-control input,
+.lead-control select,
+.lead-phone input             { font-size: 16px !important; font-weight: 400 !important; }
+.lead-hint,
+.lead-privacy                 { font-size: 14.5px !important; font-weight: 400 !important; }
+.lead-eyebrow,
+.about-eyebrow                { font-size: 15px !important; font-weight: 600 !important; }
+.navbar li > a,
+.navbar .btn-book             { font-size: 15.5px !important; font-weight: 600 !important; }
+.btn-about-primary            { font-size: 17px !important; font-weight: 600 !important; }
+.lead-flag                    { font-size: 10px !important; }
+
+/* ── العناوين: أكبر شوية ── */
+.about-content .about-title,
+.lead-heading                 { font-size: clamp(30px, 3vw, 42px) !important; line-height: 1.3 !important; }
+.about-content .about-gray    { font-size: 1em !important; }
+.lead-card-head h3            { font-size: 25px !important; }
+
+/* ══════════════════════════════════════
+   معلومات الحجز (جنب الفورم) — كروت أوضح
+   المميزات كروت بأيقونة مليانة + التواصل أزرار
+══════════════════════════════════════ */
+.lead-lead {
+  padding-inline-start: 14px;
+  border-inline-start: 3px solid var(--brand-teal);
+  line-height: 1.8 !important;
+  margin-bottom: 28px;
+}
+.lead-perks { gap: 12px; margin-bottom: 26px; }
+.lead-perks li {
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  line-height: 1.6;
+  font-weight: 600 !important;
+  background: #FBF7EE;
+  border: 1px solid rgba(193,162,107,0.35);
+  border-radius: 14px;
+  box-shadow: 0 2px 0 rgba(125,36,30,0.06);
+}
+.lead-perks .lead-perk-icon {
+  flex: 0 0 36px; height: 36px; margin-top: 0;
+  background: var(--brand-teal); color: #fff;
+}
+.lead-contact {
+  flex-direction: row; flex-wrap: wrap; gap: 12px;
+  padding-top: 0; border-top: 0;
+}
+.lead-contact a {
+  flex: 1 1 200px;
+  justify-content: center;
+  padding: 12px 16px;
+  border: 1.5px solid var(--text-color);
+  border-radius: 14px;
+  font-size: 17px !important;
+  font-weight: 700;
+  transition: background-color .2s ease, color .2s ease;
+}
+.lead-contact a .lead-contact-icon { width: 32px; height: 32px; border-radius: 50%; background: rgba(125,36,30,0.08); color: var(--text-color); }
+.lead-contact a:first-child { background: var(--text-color); color: #fff; }
+.lead-contact a:first-child .lead-contact-icon { background: rgba(255,255,255,0.18); color: #fff; }
+.lead-contact a:hover { background: var(--text-color); color: #fff; }
+.lead-contact a:first-child:hover { background: var(--brand-red-900); }
+.lead-contact a:hover .lead-contact-icon { background: rgba(255,255,255,0.18); color: #fff; }
+@media (max-width: 767px) {
+  .lead-perks li { padding: 12px 14px; font-size: 15.5px !important; }
+  .lead-contact a { font-size: 16px !important; }
+}
+
+/* ══════════════════════════════════════
+   «من نحن» — المميزات كروت احترافية
+   خط دهبي فوق الكارت + أيقونة مليانة + عنوان ووصف واضحين
+══════════════════════════════════════ */
+.about-content .about-desc {
+  padding-inline-start: 16px;
+  border-inline-start: 3px solid var(--brand-teal);
+  line-height: 1.85 !important;
+  margin-bottom: 32px;
+}
+.about-content .about-features { gap: 16px !important; margin-bottom: 36px; }
+.about-content .about-features li {
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px !important;
+  padding: 22px 20px 20px;
+  background: #fff;
+  border: 1px solid rgba(193,162,107,0.35);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 0 rgba(125,36,30,0.05), 0 10px 24px -14px rgba(74,53,37,0.25);
+  transition: box-shadow .25s ease, border-color .25s ease;
+}
+.about-content .about-features li::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(to left, var(--brand-teal), rgba(193,162,107,0.25));
+}
+.about-content .about-features li:hover {
+  border-color: rgba(193,162,107,0.7);
+  box-shadow: 0 2px 0 rgba(125,36,30,0.08), 0 16px 30px -14px rgba(74,53,37,0.35);
+}
+.about-content .feature-icon,
+.about-content .about-features li:hover .feature-icon {
+  width: 46px; height: 46px; min-width: 46px;
+  border-radius: 12px;
+  margin-top: 0;
+  background-color: var(--brand-teal);
+}
+.about-content .feature-icon svg { width: 22px; height: 22px; }
+.about-content .feature-icon [stroke]:not([stroke="none"]) { stroke: #fff; }
+.about-content .feature-text { gap: 6px !important; }
+.about-content .about-features .feature-title { font-size: 18px !important; line-height: 1.4; }
+.about-content .about-features .feature-desc  { font-size: 15.5px !important; line-height: 1.75 !important; opacity: .85; }
+@media (max-width: 600px) {
+  .about-content .about-features { grid-template-columns: minmax(0, 1fr) !important; }
+  .about-content .about-features li { flex-direction: row; padding: 18px 16px; }
+}
+
+/* ── صور العروض (About): كل كارت بنفس نسبة صورته، فالصورة بتملاه كله من غير قص ──
+   صور الموبايل 3:4 | صور الديسكتوب 12:5
+   عمودين صغيرين (w) + عمود كبير = 2w + ¾ الفاصل، عشان الصورة الطويلة
+   تطلع بالظبط بارتفاع صفين صغيرين + الفاصل */
+.mosaic-grid {
+  --mg: 10px;
+  grid-template-columns: calc((100% - 2.75 * var(--mg)) / 4) calc((100% - 2.75 * var(--mg)) / 4) 1fr !important;
+  grid-template-rows: auto !important;
+  gap: var(--mg) !important;
+  height: auto !important;
+}
+.mosaic-grid .mosaic-item { height: auto !important; align-self: start; }
+.mosaic-grid .mosaic-item:has(.offer-img[src*="hero_mobile"])  { aspect-ratio: 3 / 4; }
+.mosaic-grid .mosaic-item:has(.offer-img[src*="hero_desktop"]) { aspect-ratio: 12 / 5; }
+.mosaic-item.mi-offer .offer-img { object-fit: cover; }
+@media (max-width: 767px) { .mosaic-grid { --mg: 6px; } }
+
+/* ══════════════════════════════════════
+   فورم الحجز — تصميم احترافي أصغر
+   كارت أبيض بخط دهبي فوق، حقول أهدى وأقصر، المنطقة المختارة نبيتي، زرار نبيتي
+   (#leadForm عشان يغلب طبقات الستايل القديمة اللي فوق)
+══════════════════════════════════════ */
+@media (min-width: 1101px) {
+  .lead-wrap { grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 48px; }
+}
+#leadForm {
+  position: relative;
+  overflow: hidden;
+  padding: 28px 28px 22px;
+  gap: 16px;
+  background: #fff;
+  border: 1px solid rgba(193,162,107,0.35);
+  border-radius: 18px;
+  box-shadow: 0 2px 0 rgba(125,36,30,0.05), 0 18px 40px -20px rgba(74,53,37,0.35);
+}
+#leadForm::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 4px;
+  background: linear-gradient(to left, var(--brand-teal), var(--text-color));
+}
+#leadForm .lead-card-head { gap: 12px; padding-bottom: 14px; border-bottom: 1px solid #F1E8D6; }
+#leadForm .lead-card-badge { width: 40px; height: 40px; flex: 0 0 40px; border-radius: 12px; background: var(--brand-teal); color: #fff; }
+#leadForm .lead-card-head h3 { font-size: 20px !important; }
+#leadForm .lead-grid { gap: 14px; }
+#leadForm .lead-field { gap: 6px; }
+#leadForm .lead-field > label,
+#leadForm .lead-label { font-size: 14px !important; font-weight: 600 !important; }
+
+/* الحقول */
+#leadForm .lead-control input,
+#leadForm .lead-control select,
+#leadForm .lead-phone {
+  height: 46px;
+  font-size: 15px !important;
+  background: #FBF8F2;
+  border: 1px solid #EADFC9;
+  border-radius: 10px;
+  box-shadow: none;
+  -webkit-backdrop-filter: none; backdrop-filter: none;
+}
+#leadForm .lead-control input:hover, #leadForm .lead-control select:hover, #leadForm .lead-phone:hover {
+  background: #fff; border-color: rgba(193,162,107,0.7);
+}
+#leadForm .lead-control input:focus, #leadForm .lead-control select:focus, #leadForm .lead-phone:focus-within {
+  background: #fff; border-color: var(--brand-teal); box-shadow: 0 0 0 3px rgba(193,162,107,0.2);
+}
+#leadForm .lead-control input::placeholder,
+#leadForm .lead-phone input::placeholder { color: rgba(125,36,30,0.55); }
+#leadForm .lead-select select:invalid { color: rgba(125,36,30,0.55); }
+#leadForm .lead-icon { color: var(--brand-teal); }
+#leadForm .lead-hint { font-size: 12.5px !important; opacity: .75; }
+
+/* المنطقة */
+#leadForm .lead-regions { gap: 8px; }
+#leadForm .lead-region span {
+  min-height: 42px;
+  font-size: 14px !important;
+  background: #FBF8F2;
+  border: 1px solid #EADFC9;
+  border-radius: 10px;
+  box-shadow: none;
+  -webkit-backdrop-filter: none; backdrop-filter: none;
+}
+#leadForm .lead-region:hover span { background: #fff; border-color: rgba(193,162,107,0.7); }
+#leadForm .lead-region input:checked + span { background: var(--text-color); border-color: var(--text-color); color: #fff; box-shadow: 0 6px 14px -6px rgba(125,36,30,0.5); }
+#leadForm .lead-region input:checked + span::before { width: 14px; height: 14px; flex-basis: 14px; background-color: rgba(255,255,255,0.25); }
+
+/* الهاتف */
+#leadForm .lead-code { font-size: 15px; border-right-color: #EADFC9; }
+
+/* زرار التأكيد */
+#leadForm .lead-submit {
+  height: 48px;
+  margin-top: 4px;
+  font-size: 16px;
+  border-radius: 10px;
+  background: var(--text-color);
+  box-shadow: 0 10px 20px -10px rgba(125,36,30,0.6);
+}
+#leadForm .lead-submit:hover { background: var(--brand-red-900); box-shadow: 0 14px 26px -10px rgba(125,36,30,0.7); }
+#leadForm .lead-privacy { margin-top: -6px; font-size: 13px !important; opacity: .8; }
+
+@media (max-width: 767px) {
+  #leadForm { padding: 22px 16px 18px; border-radius: 16px; }
+  #leadForm .lead-region span { min-height: 42px; font-size: 13.5px !important; }
+}
+
+/* ══════════════════════════════════════
+   هيدر ومنيو الموبايل — أبيض بنفس ستايل الموقع
+   المنيو كارت أبيض بخط دهبي فوق، والصفحة وراه بتغمق شوية عشان الكلام ما يبانش من ورا
+══════════════════════════════════════ */
+@media (max-width: 767px) {
+  .navbar { background: #fff; box-shadow: 0 2px 0 rgba(125,36,30,0.05), 0 10px 24px -14px rgba(74,53,37,0.35) !important; }
+  .mobile-nav-overlay {
+    overflow: hidden;
+    gap: 14px;
+    padding: 18px 14px 14px;
+    background: #fff;
+    border: 1px solid rgba(193,162,107,0.35);
+    box-shadow: 0 0 0 100vmax rgba(46,33,23,0), 0 24px 50px rgba(46,33,23,0.18);
+    transition: opacity .3s ease, transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s ease, visibility 0s linear .35s;
+  }
+  .mobile-nav-overlay.is-open {
+    box-shadow: 0 0 0 100vmax rgba(46,33,23,0.35), 0 24px 50px rgba(46,33,23,0.18);
+    transition: opacity .3s ease, transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s ease, visibility 0s;
+  }
+  .mobile-nav-overlay::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 4px;
+    background: linear-gradient(to left, var(--brand-teal), var(--text-color));
+  }
+  .mobile-nav-links a { font-weight: 600; }
+  .mobile-nav-links a:hover { background: #FBF8F2; }
+  .mobile-nav-links a.active { background: #FBF8F2; box-shadow: inset 0 0 0 1px #EADFC9; }
+  .mnav-icon { background: #FBF8F2; color: var(--brand-teal); box-shadow: inset 0 0 0 1px #EADFC9; }
+  .mobile-nav-links a.active .mnav-icon { background: var(--brand-teal); color: #fff; box-shadow: none; }
+  .mnav-cta { background: var(--text-color); box-shadow: 0 10px 20px -10px rgba(125,36,30,0.6); }
+  .mnav-contact { border-top-color: #F1E8D6; }
+  .mnav-contact a { background: #fff; border: 1px solid #EADFC9; }
+  .mnav-contact a:first-child { border-color: var(--text-color); }
+  .mnav-contact-icon { color: var(--brand-teal); }
+}
+/* خانة الخدمة مقفولة لحد ما الفرع يتختار */
+#leadForm .lead-control select:disabled { cursor: not-allowed; opacity: .6; }
+
+/* ── عنوان «من نحن»: السطر الدهبي «من الثقة في المملكة العربية السعودية»
+   أصغر شوية من «أكثر من ثلاثة عقود»، والسطور بتتقسم بالتساوي عشان ما تفضلش كلمة لوحدها ── */
+.about-content .about-title .about-highlight {
+  display: inline-block;
+  font-size: 0.92em;
+  line-height: 1.3;
+  text-wrap: balance;
+}
